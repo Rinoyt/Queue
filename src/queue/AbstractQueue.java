@@ -1,3 +1,5 @@
+package queue;
+
 import java.util.Collection;
 import java.util.NoSuchElementException;
 import java.util.Objects;
