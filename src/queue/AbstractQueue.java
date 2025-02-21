@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.Queue;
 
 public abstract class AbstractQueue<T> implements Queue<T> {
-    protected int capacity = 16;
+    protected int capacity;
     private int size = 0;
 
     @Override
