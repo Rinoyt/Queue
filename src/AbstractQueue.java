@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Queue;
 
 public abstract class AbstractQueue<T> implements Queue<T> {
+    protected int capacity = 16;
     private int size = 0;
 
     @Override
@@ -46,7 +47,7 @@ public abstract class AbstractQueue<T> implements Queue<T> {
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -60,6 +61,9 @@ public abstract class AbstractQueue<T> implements Queue<T> {
     @Override
     public boolean offer(T t) {
         size++;
+        if (size == capacity) {
+            return false;
+        }
         return offerImpl(Objects.requireNonNull(t));
     }
 
