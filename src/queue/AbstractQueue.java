@@ -1,9 +1,6 @@
 package queue;
 
-import java.util.Collection;
-import java.util.NoSuchElementException;
-import java.util.Objects;
-import java.util.Queue;
+import java.util.*;
 
 public abstract class AbstractQueue<T> implements Queue<T> {
     private int size = 0;
@@ -28,6 +25,16 @@ public abstract class AbstractQueue<T> implements Queue<T> {
 
     @Override
     public boolean remove(Object o) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public Iterator<T> iterator() {
         throw new UnsupportedOperationException();
     }
 
